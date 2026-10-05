@@ -35,3 +35,12 @@ Se abre el navegador en http://127.0.0.1:8765. Para cerrar, cierra la ventana ne
 Cada día que abres el programa se copia la base de datos a `backups/` (últimas 30). Para mover tus datos a otra PC, copia `data/finanzas.db`.
 
 Nota: las compras a meses sin intereses se registran por su total al comprar; la tarjeta muestra la mensualidad y los meses restantes.
+
+## 🤖 Bot de Telegram (opcional)
+Registra y consulta desde el celular, sin abrir puertos (el bot consulta a Telegram desde tu PC; la PC debe estar encendida con `iniciar.bat` abierto).
+1. En Telegram habla con **@BotFather**, escribe `/newbot` y copia el token.
+2. Ejecuta `iniciar_bot.bat` (o `python bot.py --setup`), pega el token y escríbele "hola" a tu bot: confirma en la consola que ese ID es tuyo. Solo ese usuario podrá darle órdenes.
+3. Reinicia `iniciar.bat`: el bot arranca junto con el programa.
+
+Ejemplos: `gasté 250 super` · `gasté 1200 gasolina con visa` · `compré 6000 laptop con visa a 6 msi` · `ingreso 15000 sueldo bbva` · `pago tarjeta visa 1000 bbva` · `gasté 90 tacos ayer` · `/resumen` `/saldos` `/tarjetas` `/presupuestos` `/ultimos` `/borrar`.
+El token se guarda en `data/telegram.json` (no se sube a git). Si lo filtras, revócalo en @BotFather con `/revoke`.

@@ -598,6 +598,12 @@ def main():
         print(f"El puerto {PORT} está ocupado (¿ya está abierto el programa?). Abriendo el navegador…")
         webbrowser.open(f"http://{HOST}:{PORT}")
         return
+    try:  # bot de Telegram opcional (solo si ya se configuró con bot.py --setup)
+        import bot
+        if bot.load_config():
+            threading.Thread(target=bot.run_forever, daemon=True).start()
+    except Exception as e:  # noqa
+        print("Bot de Telegram no iniciado:", e)
     url = f"http://{HOST}:{PORT}"
     print(f"Finanzas personales corriendo en {url}\nPresiona Ctrl+C para cerrar.")
     if "--no-browser" not in sys.argv:
