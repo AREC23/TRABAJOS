@@ -1,0 +1,42 @@
+:root{--bg:#f4f6fb;--card:#fff;--tx:#1f2937;--mut:#6b7280;--bd:#e5e7eb;--pri:#4f46e5;--ok:#16a34a;--bad:#dc2626;--warn:#d97706}
+@media(prefers-color-scheme:dark){:root{--bg:#0f172a;--card:#1e293b;--tx:#e5e7eb;--mut:#94a3b8;--bd:#334155;--pri:#818cf8}}
+*{box-sizing:border-box}
+body{margin:0;font:15px/1.4 system-ui,Segoe UI,Roboto,sans-serif;background:var(--bg);color:var(--tx);display:flex;min-height:100vh}
+aside{width:210px;background:var(--card);border-right:1px solid var(--bd);padding:16px 10px;position:sticky;top:0;height:100vh;display:flex;flex-direction:column}
+aside h1{font-size:18px;margin:0 8px 16px}
+#menu button{display:block;width:100%;text-align:left;background:none;border:0;padding:10px 12px;border-radius:8px;color:var(--tx);cursor:pointer;font-size:15px}
+#menu button:hover{background:var(--bg)}#menu button.on{background:var(--pri);color:#fff}
+.sidefoot{margin-top:auto;color:var(--mut);font-size:12px;padding:8px}
+main{flex:1;padding:20px 26px;max-width:1200px;min-width:0}
+header{display:flex;align-items:center;gap:14px;margin-bottom:18px;flex-wrap:wrap}
+header h2{margin:0;flex:1;font-size:22px}
+#monthbar{display:flex;gap:4px}
+input,select,textarea,button{font:inherit;color:inherit}
+input,select,textarea{background:var(--card);border:1px solid var(--bd);border-radius:8px;padding:8px 10px;width:100%}
+#monthbar input{width:auto}
+button{border:1px solid var(--bd);background:var(--card);border-radius:8px;padding:8px 14px;cursor:pointer}
+button.primary{background:var(--pri);color:#fff;border-color:var(--pri)}
+button.danger{color:var(--bad)}button.ghost{padding:8px 10px}button.sm{padding:3px 9px;font-size:13px}
+.grid{display:grid;gap:14px}.g4{grid-template-columns:repeat(auto-fit,minmax(200px,1fr))}.g2{grid-template-columns:repeat(auto-fit,minmax(340px,1fr))}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:12px;padding:16px}
+.card h3{margin:0 0 10px;font-size:15px;color:var(--mut);font-weight:600}
+.kpi .v{font-size:26px;font-weight:700}.kpi .s{color:var(--mut);font-size:13px}
+.pos{color:var(--ok)}.neg{color:var(--bad)}.mut{color:var(--mut)}
+table{width:100%;border-collapse:collapse}th,td{padding:8px 6px;text-align:left;border-bottom:1px solid var(--bd);vertical-align:middle}
+th{color:var(--mut);font-weight:600;font-size:13px}td.r,th.r{text-align:right}
+.bar{height:10px;background:var(--bd);border-radius:6px;overflow:hidden}.bar i{display:block;height:100%;background:var(--ok)}
+.bar.warn i{background:var(--warn)}.bar.bad i{background:var(--bad)}
+.alert{padding:10px 14px;border-radius:8px;margin-bottom:8px;background:#fef3c7;color:#92400e}.alert.danger{background:#fee2e2;color:#991b1b}
+.tag{display:inline-block;padding:1px 8px;border-radius:10px;font-size:12px;background:var(--bg);border:1px solid var(--bd)}
+.row{display:flex;gap:10px;align-items:center;flex-wrap:wrap}.row>*{flex:0 0 auto}.sp{flex:1!important}
+#modal{position:fixed;inset:0;background:#0007;display:flex;align-items:center;justify-content:center;z-index:10;padding:14px}
+#modal[hidden]{display:none}
+.box{background:var(--card);border-radius:14px;padding:20px;width:100%;max-width:480px;max-height:92vh;overflow:auto}
+.box h3{margin:0 0 14px}.box label{display:block;margin:10px 0 3px;font-size:13px;color:var(--mut)}
+.box .btns{display:flex;gap:8px;justify-content:flex-end;margin-top:18px}
+.seg{display:flex;gap:6px}.seg button{flex:1}.seg button.on{background:var(--pri);color:#fff;border-color:var(--pri)}
+#toast{position:fixed;bottom:20px;left:50%;transform:translateX(-50%);background:#111827;color:#fff;padding:10px 18px;border-radius:8px;z-index:20}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px}.filters>*{width:auto;flex:1 1 140px}
+.legend{display:flex;flex-wrap:wrap;gap:4px 14px;font-size:13px}.legend i{display:inline-block;width:10px;height:10px;border-radius:3px;margin-right:5px}
+svg text{fill:var(--mut);font-size:11px}
+@media(max-width:800px){body{flex-direction:column}aside{width:auto;height:auto;position:static;flex-direction:row;overflow-x:auto;padding:6px}aside h1,.sidefoot{display:none}#menu{display:flex}#menu button{white-space:nowrap}main{padding:14px}}

@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Mis Finanzas</title>
+<link rel="icon" href="favicon.svg">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<aside id="nav">
+  <h1>💰 Mis Finanzas</h1>
+  <nav id="menu"></nav>
+  <div class="sidefoot">Datos 100% locales<br>en tu PC</div>
+</aside>
+<main>
+  <header>
+    <h2 id="title"></h2>
+    <div id="monthbar">
+      <button class="ghost" id="prev">◀</button>
+      <input type="month" id="month">
+      <button class="ghost" id="next">▶</button>
+    </div>
+    <button id="addtx" class="primary">+ Movimiento</button>
+  </header>
+  <div id="view"></div>
+</main>
+<div id="modal" hidden><div class="box" id="box"></div></div>
+<div id="toast" hidden></div>
+<script src="app.js"></script>
+</body>
+</html>

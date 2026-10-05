@@ -1,0 +1,4 @@
+finanzas/data/
+finanzas/backups/
+__pycache__/
+*.db
